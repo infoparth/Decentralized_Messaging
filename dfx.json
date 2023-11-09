@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "hidden_backend": {
+      "main": "src/hidden_backend/main.mo",
+      "type": "motoko"
+    },
+    "hidden_frontend": {
+      "dependencies": [
+        "hidden_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/hidden_frontend/src/index.html"
+      },
+      "source": [
+        "src/hidden_frontend/assets",
+        "dist/hidden_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
